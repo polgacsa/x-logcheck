@@ -1,1 +1,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? peer info
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? TLS Error: cannot locate HMAC in incoming packet from
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+\/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? TLS ERROR: received control packet with stale session-id=
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+\/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? TLS Error: incoming packet authentication failed from
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+\/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? Authenticate\/Decrypt packet error: bad packet ID
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+\/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? TLS ERROR: local\/remote key IDs out of sync
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (openvpn|ovpn-[._[:alnum:]-]+)\[[[:digit:]]+\]:( ([-_.@[:alnum:]]+\/)?[.[:digit:]]{7,15}:[[:digit:]]{2,5})? TLS Error: Unroutable control packet received from

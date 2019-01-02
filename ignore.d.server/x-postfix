@@ -1,11 +1,20 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: warning: hostname .+ does not resolve to address .+: Name or service not known$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: warning: hostname [^[:space:]]+ does not resolve to address .+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: warning: TLS library problem: error:[[:alnum:]]+:SSL routines:SSL23_GET_CLIENT_HELLO
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: SSL_accept error from [[:digit:]][[:alnum:].-]+\[[[:alnum:]\.:]+\]: lost connection$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: disconnect from
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: improper command pipelining after
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/lmtp\[[[:digit:]]+\]: [[:alnum:]]+: to=<[^>]+>, orig_to=<[^>]+>, relay=[a-z.]+\[dspam/deliver\], delay=[[:digit:]\.]+, delays=[[:digit:]\./]+, dsn=[[:digit:]\.]+, status=sent \([^)]+\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/bounce\[[[:digit:]]+\]: warning: malformed request$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/qmgr\[[[:digit:]]+\]: warning: private/defer socket: malformed request$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: warning: TLS library problem: error:[0-9]+:SSL routines:
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd?\[[[:digit:]]+\]: warning: [^[:space:]]+: SASL Login authentication failed
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd\[[[:digit:]]+\]: warning: hostname .+ does not resolve to address .+: Name or service not known$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: warning: hostname [^[:space:]]+ does not resolve to address .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: warning: TLS library problem: error:[[:alnum:]]+:SSL routines:SSL23_GET_CLIENT_HELLO
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: SSL_accept error from
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: disconnect from
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: improper command pipelining after
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/lmtp\[[[:digit:]]+\]: [[:alnum:]]+: to=<[^>]+>, orig_to=<[^>]+>, relay=[a-z.]+\[dspam/deliver\], delay=[[:digit:]\.]+, delays=[[:digit:]\./]+, dsn=[[:digit:]\.]+, status=sent \([^)]+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/bounce\[[[:digit:]]+\]: warning: malformed request$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/qmgr\[[[:digit:]]+\]: warning: private/defer socket: malformed request$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: warning: TLS library problem: error:[[:alnum:]]+:SSL routines:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: warning: [^[:space:]]+: SASL Login authentication failed
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: lost connection after [[:upper:]]+ from
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd\[[[:digit:]]+\]: (dis)?connect from [^[:space:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd?\[[[:digit:]]+\]: ((Anonymous|Trusted|Verified) )?TLS connection established (to|from) [^[:space:]]+: (TLSv[12.]+|SSLv[23]) with cipher [^[:space:]]+ \([\/[:digit:]]+ bits\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps\/)?smtpd\[[[:digit:]]+\]: [[:alnum:]]+: reject: (CONNECT|RCPT) from [^[:space:]]+: [45][[:digit:]][[:digit:]]( [[:digit:]]\.[[:digit:]]\.[[:digit:]]+)? Client host rejected: cannot find your hostname, [^[:space:]]+; (from=[^[:space:]]+ to=[^[:space:]]+ )?proto=E?SMTP( helo=[^[:space:]]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps|submission\/)?smtpd?\[[[:digit:]]+\]: ((Anonymous|Trusted|Verified) )?TLS connection established (to|from) [^[:space:]]+: (TLSv[12.]+|SSLv[23]) with cipher [^[:space:]]+ \([\/[:digit:]]+ bits\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps|submission\/)?smtpd\[[[:digit:]]+\]: (dis)?connect from [^[:space:]]+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(smtps|submission\/)?smtpd\[[[:digit:]]+\]: lost connection after [[:upper:]]+( \([[:digit:]]+ bytes\))? from [._[:alnum:]-]+\[(unknown|[[:xdigit:].:]{3,39})\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(submission\/)?smtpd?\[[[:digit:]]+\]: NOQUEUE: reject: RCPT from unknown\[[.[:alnum:]]+\]: [[:alnum:]]+ [.[:alnum:]]+ <[.@[:alnum:]]+>: Recipient address rejected: Access denied; from=<[.@[:alnum:]]+> to=<[.@[:alnum:]]+> proto=ESMTP helo=
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix\/(submission\/)?smtpd?\[[[:digit:]]+\]: warning: hostname [._[:alnum:]-]+ does not resolve to address [._[:alnum:]-]+: Name or service not known
